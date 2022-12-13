@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .line {
-   @apply w-[30px] h-[2px] block my-2 bg-secondary;
+   @apply w-[30px] h-[2px] block my-2 bg-secondary dark:bg-slate-100;
 }
 .hamburger-active > span:nth-child(1) {
     @apply rotate-45 ;
@@ -16,8 +16,12 @@
 }
 
 .navbar-fixed {
-    @apply fixed z-[99999] bg-white bg-opacity-70 backdrop-blur-md shadow-md;
+    @apply fixed z-[99999] bg-white dark:bg-black dark:bg-opacity-70 bg-opacity-70 backdrop-blur-md shadow-md;
 }
 body {
 @apply font-fontPrim;
+}
+
+#check:checked ~ label div.toggleLamp {
+@apply translate-x-4 ;
 }
